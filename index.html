@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>cADPR Exo™  ·  Refilled PRO Line</title>
+<meta name="description" content="표피를 넘어, 진피까지 닿는 시그널 캐리어. cADPR Exo™ — 리필드 PRO 라인 전용 신원료." />
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+<style>
+  /* ============================================================
+     RESET & TOKENS  ·  PRO DARK + GOLD
+  ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+                 "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", system-ui, sans-serif;
+    color: #F4EFE4;
+    background: #08070B;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { display: block; max-width: 100%; }
+  button { font: inherit; cursor: pointer; }
+
+  :root {
+    --bg-base:    #08070B;
+    --bg-deep:    #050409;
+    --bg-mid:     #15110A;
+    --bg-soft:    #1E1A13;
+    --bg-cream:   #F4EFE4;
+    --bg-paper:   #FAF6EE;
+
+    --gold:       #C5A572;
+    --gold-bright:#D4B985;
+    --gold-deep:  #8A6F47;
+    --gold-glow:  rgba(197,165,114,0.55);
+    --gold-soft:  rgba(197,165,114,0.10);
+
+    --blue:       #4A7BFF;
+    --blue-soft:  rgba(74,123,255,0.12);
+
+    --white:      #FFFFFF;
+    --ivory:      #F4EFE4;
+    --warm-gray:  #8A8378;
+    --warm-line:  rgba(244,239,228,0.10);
+
+    --navy:       #0F1A3A;
+    --gray:       #6F7593;
+    --border:     #E2E6F0;
+
+    --maxw: 1200px;
+    --pad: clamp(20px, 5vw, 64px);
+
+    --t-fast:  cubic-bezier(.2,.7,.3,1);
+    --t-ease:  cubic-bezier(.16,.84,.44,1);
+  }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding-inline: var(--pad); }
+  .sec { padding-block: clamp(80px, 12vw, 160px); position: relative; overflow: hidden; }
+  .sec--dark  { background: var(--bg-base); color: var(--ivory); }
+  .sec--mid   { background: var(--bg-mid); color: var(--ivory); }
+  .sec--cream { background: var(--bg-cream); color: var(--navy); }
+  .sec--paper { background: var(--bg-paper); color: var(--navy); }
+
+  .eyebrow {
+    font-size: 11px; font-weight: 800; letter-spacing: 0.24em;
+    color: var(--gold); text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before {
+    content: ""; width: 24px; height: 1px; background: var(--gold);
+  }
+  .sec--cream .eyebrow, .sec--paper .eyebrow { color: var(--gold-deep); }
+  .sec--cream .eyebrow::before, .sec--paper .eyebrow::before { background: var(--gold-deep); }
+
+  .h1 { font-size: clamp(36px, 5.4vw, 64px); line-height: 1.16; font-weight: 800; letter-spacing: -0.024em; margin: 0; }
+  .h2 { font-size: clamp(28px, 3.8vw, 44px); line-height: 1.22; font-weight: 800; letter-spacing: -0.018em; margin: 0; }
+  .h3 { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.35; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+  .lead { font-size: clamp(16px, 1.4vw, 19px); line-height: 1.75; color: rgba(244,239,228,0.7); margin: 18px 0 0; max-width: 56ch; }
+  .sec--cream .lead, .sec--paper .lead { color: var(--gray); }
+  .note { font-size: 12px; line-height: 1.6; color: rgba(244,239,228,0.45); font-style: italic; }
+  .sec--cream .note, .sec--paper .note { color: var(--gray); }
+
+  /* ============================================================
+     S1 — HERO
+  ============================================================ */
+  .hero {
+    min-height: 100vh; min-height: 100svh;
+    background:
+      radial-gradient(ellipse at 75% 25%, rgba(197,165,114,0.20), transparent 50%),
+      radial-gradient(ellipse at 15% 80%, rgba(197,165,114,0.10), transparent 55%),
+      linear-gradient(180deg, #050409 0%, #0A0809 100%);
+    display: grid; place-items: center;
+    padding-block: clamp(80px, 14vw, 140px);
+    position: relative; overflow: hidden;
+  }
+  .hero__inner {
+    position: relative; z-index: 1;
+    display: grid; gap: 64px;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 960px) {
+    .hero__inner { grid-template-columns: 1.05fr 0.95fr; gap: 80px; }
+  }
+
+  .hero__line {
+    display: inline-flex; align-items: center; gap: 12px;
+    color: var(--gold); font-weight: 700; letter-spacing: 0.18em;
+    font-size: 11px; margin-bottom: 22px;
+    text-transform: uppercase;
+  }
+  .hero__line::before, .hero__line::after {
+    content: ""; width: 28px; height: 1px; background: var(--gold); opacity: 0.6;
+  }
+
+  .hero__name {
+    font-size: clamp(48px, 7.2vw, 96px);
+    font-weight: 900; line-height: 0.98; letter-spacing: -0.034em;
+    color: var(--white); margin: 0;
+  }
+  .hero__name b { color: var(--gold); font-weight: 900; }
+  .hero__name sup { font-size: 0.32em; vertical-align: super; font-weight: 600; opacity: 0.65; }
+
+  .hero__slogan {
+    font-size: clamp(20px, 2.6vw, 30px);
+    font-weight: 600; line-height: 1.4; letter-spacing: -0.012em;
+    color: var(--ivory); margin: 28px 0 0;
+  }
+  .hero__slogan em { font-style: normal; color: var(--gold-bright); font-weight: 800; }
+
+  .hero__sub {
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: rgba(244,239,228,0.6); margin: 20px 0 0; max-width: 46ch; line-height: 1.75;
+  }
+  .hero__sub strong { color: var(--ivory); font-weight: 700; }
+
+  .hero__meta { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 24px; }
+  .hero__meta-item {
+    border-left: 1px solid var(--gold);
+    padding-left: 14px;
+  }
+  .hero__meta-item small {
+    display: block; font-size: 10px; letter-spacing: 0.2em;
+    color: var(--gold); text-transform: uppercase; font-weight: 700;
+  }
+  .hero__meta-item span {
+    display: block; font-size: 14px; color: var(--ivory); font-weight: 600; margin-top: 4px;
+  }
+
+  /* — Hero visual: 정교한 캡슐 — */
+  .capsule {
+    position: relative; aspect-ratio: 1/1; width: 100%; max-width: 480px;
+    margin-inline: auto;
+    display: grid; place-items: center;
+  }
+  .capsule__orbit {
+    position: absolute; inset: 4%;
+    border: 1px solid rgba(197,165,114,0.18);
+    border-radius: 50%;
+    animation: orbit 40s linear infinite;
+  }
+  .capsule__orbit::before {
+    content: ""; position: absolute; top: -3px; left: 50%;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); box-shadow: 0 0 12px var(--gold);
+    transform: translateX(-50%);
+  }
+  .capsule__orbit--2 {
+    inset: 14%;
+    animation: orbit 28s linear infinite reverse;
+  }
+  .capsule__orbit--2::before { left: 0; top: 50%; transform: translateY(-50%); }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+
+  .capsule__shell {
+    position: relative;
+    width: 64%; aspect-ratio: 1/1; border-radius: 50%;
+    background:
+      radial-gradient(circle at 32% 28%, rgba(255,255,255,0.18) 0%, rgba(197,165,114,0.10) 30%, transparent 60%),
+      radial-gradient(circle at 50% 55%, rgba(197,165,114,0.28) 0%, rgba(15,11,5,0.6) 70%);
+    border: 1px solid rgba(197,165,114,0.45);
+    box-shadow:
+      0 0 100px rgba(197,165,114,0.25),
+      inset 0 0 50px rgba(255,255,255,0.05),
+      inset 0 0 0 8px rgba(15,11,5,0.4);
+    display: grid; place-items: center;
+    animation: breath 5s var(--t-ease) infinite;
+  }
+  @keyframes breath {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.03); }
+  }
+  .capsule__shell::after {
+    content: ""; position: absolute; top: 12%; left: 18%;
+    width: 22%; height: 16%; border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.55) 0%, transparent 70%);
+    filter: blur(2px);
+  }
+
+  .capsule__core {
+    position: relative;
+    width: 42%; aspect-ratio: 1/1; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%,
+      #FFFFFF 0%,
+      #B8C8F0 25%,
+      #4A7BFF 60%,
+      #0A2A8A 100%);
+    box-shadow:
+      0 0 40px rgba(74,123,255,0.55),
+      inset 0 0 20px rgba(255,255,255,0.2);
+    animation: corePulse 2.4s ease-in-out infinite;
+  }
+  @keyframes corePulse {
+    0%, 100% { transform: scale(0.94); box-shadow: 0 0 30px rgba(74,123,255,0.4); }
+    50%      { transform: scale(1.06); box-shadow: 0 0 60px rgba(74,123,255,0.75); }
+  }
+
+  .capsule__caption {
+    position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+    font-size: 10px; letter-spacing: 0.24em; color: var(--gold);
+    font-weight: 700; text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .hero__scroll {
+    position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+    color: rgba(244,239,228,0.4); font-size: 10px; letter-spacing: 0.26em;
+    display: inline-flex; align-items: center; gap: 8px; flex-direction: column;
+  }
+  .hero__scroll::after {
+    content: ""; width: 1px; height: 36px; background: rgba(244,239,228,0.4);
+    animation: scrollPulse 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(0.3); transform-origin: top; opacity: 0.3; }
+    50%      { transform: scaleY(1); opacity: 0.9; }
+  }
+
+  /* ============================================================
+     S2 — THE GAP (cADPR 단독의 한계 → Exo 해답)
+  ============================================================ */
+  .gap__head { max-width: 60ch; margin-bottom: 56px; }
+  .gap__grid {
+    display: grid; gap: 0;
+    grid-template-columns: 1fr;
+    border: 1px solid var(--warm-line);
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  @media (min-width: 900px) {
+    .gap__grid { grid-template-columns: 1fr auto 1fr; }
+  }
+
+  .gap-col {
+    padding: clamp(28px, 4vw, 48px);
+    background: linear-gradient(180deg, rgba(244,239,228,0.02), transparent);
+  }
+  .gap-col--alt {
+    background:
+      radial-gradient(ellipse at 50% 30%, rgba(197,165,114,0.12), transparent 70%),
+      linear-gradient(180deg, rgba(197,165,114,0.05), transparent);
+    border-top: 1px solid var(--warm-line);
+  }
+  @media (min-width: 900px) {
+    .gap-col--alt { border-top: 0; border-left: 1px solid var(--warm-line); }
+  }
+  .gap-col__tag {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.22em;
+    color: var(--warm-gray); text-transform: uppercase; margin-bottom: 16px;
+  }
+  .gap-col--alt .gap-col__tag { color: var(--gold); }
+  .gap-col__title {
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 800; letter-spacing: -0.018em;
+    color: var(--ivory); margin: 0 0 18px;
+  }
+  .gap-col__line {
+    font-size: 14px; line-height: 1.7;
+    color: rgba(244,239,228,0.6); margin: 8px 0;
+    padding-left: 18px; position: relative;
+  }
+  .gap-col__line::before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--warm-gray);
+  }
+  .gap-col--alt .gap-col__line { color: rgba(244,239,228,0.85); }
+  .gap-col--alt .gap-col__line::before { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+
+  .gap__arrow {
+    display: grid; place-items: center;
+    padding: 24px;
+    font-size: 24px; color: var(--gold);
+    border-top: 1px solid var(--warm-line);
+  }
+  @media (min-width: 900px) {
+    .gap__arrow { border-top: 0; border-left: 1px solid var(--warm-line); border-right: 1px solid var(--warm-line); padding: 32px 16px; }
+    .gap__arrow span { writing-mode: horizontal-tb; }
+  }
+
+  /* ============================================================
+     S3 — MEET THE CHARACTER (캡슐 단면)
+  ============================================================ */
+  .meet { background: var(--bg-mid); }
+  .meet__grid {
+    display: grid; gap: clamp(40px, 6vw, 80px);
+    grid-template-columns: 1fr; align-items: center;
+  }
+  @media (min-width: 920px) { .meet__grid { grid-template-columns: 0.95fr 1.05fr; } }
+
+  .meet__title { color: var(--ivory); }
+  .meet__title em { font-style: normal; color: var(--gold); }
+  .meet__body { margin-top: 22px; color: rgba(244,239,228,0.7); font-size: 16px; line-height: 1.8; max-width: 52ch; }
+  .meet__body strong { color: var(--ivory); font-weight: 700; }
+
+  .meet__chars { margin-top: 40px; display: grid; gap: 14px; }
+  .char {
+    display: grid; gap: 18px; align-items: center;
+    grid-template-columns: 64px 1fr;
+    padding: 22px 24px;
+    background: linear-gradient(180deg, rgba(244,239,228,0.04), rgba(244,239,228,0.01));
+    border: 1px solid var(--warm-line);
+    border-radius: 14px;
+  }
+  .char__badge {
+    width: 64px; height: 64px; border-radius: 14px;
+    display: grid; place-items: center;
+    position: relative;
+  }
+  .char__badge--shell {
+    background: rgba(197,165,114,0.10);
+    border: 1px solid rgba(197,165,114,0.3);
+  }
+  .char__badge--core {
+    background: rgba(74,123,255,0.10);
+    border: 1px solid rgba(74,123,255,0.3);
+  }
+  .char__badge svg { width: 30px; height: 30px; }
+  .char__name { font-size: 17px; font-weight: 800; color: var(--ivory); letter-spacing: -0.01em; }
+  .char__name b { color: var(--gold); }
+  .char__name.core b { color: var(--blue); }
+  .char__desc { font-size: 13.5px; color: rgba(244,239,228,0.6); margin-top: 4px; line-height: 1.65; }
+
+  /* — 캡슐 단면 시각화 (외피·코어 라벨 포함) — */
+  .cross-section {
+    position: relative; aspect-ratio: 1/1; max-width: 520px; width: 100%;
+    margin-inline: auto;
+  }
+  .cross-section svg { width: 100%; height: 100%; }
+
+  /* ============================================================
+     S4 — SIGNATURE NUMBERS (cADPR Exo 4가지 숫자)
+  ============================================================ */
+  .nums__head { display: flex; flex-wrap: wrap; align-items: end; gap: 24px; margin-bottom: 56px; }
+  .nums__head .lead { margin-top: 0; }
+  .nums__grid {
+    display: grid; gap: 0;
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--warm-line);
+  }
+  @media (min-width: 700px) { .nums__grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .nums__grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .num {
+    padding: 44px 30px;
+    border-right: 1px solid var(--warm-line);
+    border-bottom: 1px solid var(--warm-line);
+    position: relative;
+    transition: background .35s var(--t-ease);
+  }
+  .num:hover { background: rgba(197,165,114,0.04); }
+  @media (max-width: 999px) {
+    .num:nth-child(2n) { border-right: 0; }
+  }
+  @media (max-width: 699px) {
+    .num { border-right: 0; }
+  }
+  .num:last-child { border-right: 0; }
+  .num__tag { font-size: 10px; font-weight: 800; letter-spacing: 0.24em; color: var(--gold); text-transform: uppercase; }
+  .num__big {
+    margin-top: 18px;
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 900; letter-spacing: -0.034em; line-height: 1;
+    color: var(--ivory);
+  }
+  .num__big sup { font-size: 0.42em; vertical-align: super; font-weight: 700; color: rgba(244,239,228,0.5); margin-left: 4px; }
+  .num__name { margin-top: 18px; font-size: 15px; font-weight: 800; color: var(--ivory); letter-spacing: -0.01em; }
+  .num__desc { margin-top: 8px; font-size: 12.5px; color: rgba(244,239,228,0.55); line-height: 1.65; }
+
+  /* ============================================================
+     S5 — DELIVERY PATH (표피→진피→모낭)
+  ============================================================ */
+  .deliv { background: var(--bg-base); }
+  .deliv__head { max-width: 60ch; margin-bottom: 64px; }
+  .deliv__layers {
+    display: grid; gap: 18px;
+    max-width: 980px; margin-inline: auto;
+  }
+  .layer {
+    display: grid; gap: 28px; align-items: center;
+    grid-template-columns: 130px 1fr;
+    padding: 26px 28px;
+    background: linear-gradient(90deg, rgba(244,239,228,0.04), rgba(244,239,228,0.01));
+    border: 1px solid var(--warm-line);
+    border-radius: 16px;
+  }
+  .layer__name { font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(244,239,228,0.4); }
+  .layer__name b { display: block; font-size: 22px; color: var(--ivory); font-weight: 900; margin-top: 6px; letter-spacing: -0.02em; }
+  .layer__line {
+    height: 4px; border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold-bright), var(--gold) 40%, rgba(197,165,114,0.15));
+    position: relative;
+  }
+  .layer__line span {
+    position: absolute; right: 0; top: -8px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--gold-bright);
+    box-shadow: 0 0 24px var(--gold-glow);
+    animation: travel 3s var(--t-ease) infinite;
+  }
+  @keyframes travel { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-8px); } }
+  .layer__detail { margin-top: 10px; font-size: 13px; color: rgba(244,239,228,0.55); line-height: 1.65; }
+  .layer__detail strong { color: var(--ivory); font-weight: 700; }
+  .layer--blocked .layer__line {
+    background: linear-gradient(90deg, #4A4338, #2A2620 60%, rgba(40,38,32,0.15));
+  }
+  .layer--blocked .layer__line span { background: #4A4338; box-shadow: none; animation: blocked 3s ease-in-out infinite; }
+  @keyframes blocked { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-30px); } }
+
+  /* in vitro 인용 — 작은 박스 */
+  .deliv__cite {
+    margin-top: 40px; max-width: 720px; margin-inline: auto;
+    padding: 22px 24px;
+    border-left: 2px solid var(--gold);
+    background: rgba(197,165,114,0.04);
+    border-radius: 0 12px 12px 0;
+    font-size: 13.5px; line-height: 1.7; color: rgba(244,239,228,0.7);
+  }
+  .deliv__cite strong { color: var(--ivory); }
+
+  /* ============================================================
+     S6 — ACTIVATION RITUAL (1제+2제 시스템)
+  ============================================================ */
+  .act { background: var(--bg-paper); color: var(--navy); }
+  .act__head { max-width: 56ch; margin-bottom: 56px; }
+  .act__head .h2 { color: var(--navy); }
+  .act__head em { font-style: normal; color: var(--gold-deep); font-weight: 800; }
+
+  .act__steps {
+    display: grid; gap: 18px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 700px) { .act__steps { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .act__steps { grid-template-columns: repeat(3, 1fr); } }
+
+  .step {
+    background: var(--white);
+    border: 1px solid rgba(197,165,114,0.20);
+    border-radius: 18px;
+    padding: 32px 28px;
+    position: relative;
+  }
+  .step__num {
+    position: absolute; top: 28px; right: 28px;
+    font-size: 60px; font-weight: 900; line-height: 1;
+    color: rgba(197,165,114,0.18); letter-spacing: -0.04em;
+  }
+  .step__icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: linear-gradient(165deg, var(--gold-bright), var(--gold-deep));
+    display: grid; place-items: center; color: var(--white);
+    margin-bottom: 24px;
+  }
+  .step__icon svg { width: 28px; height: 28px; }
+  .step__title {
+    font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .step__desc { font-size: 14px; color: var(--gray); line-height: 1.7; margin: 0; }
+
+  .act__why {
+    margin-top: 56px; padding: 28px 32px;
+    background: linear-gradient(135deg, rgba(197,165,114,0.10) 0%, rgba(197,165,114,0.02) 100%);
+    border: 1px solid rgba(197,165,114,0.25);
+    border-radius: 16px;
+  }
+  .act__why h4 {
+    font-size: 11px; font-weight: 800; letter-spacing: 0.2em;
+    color: var(--gold-deep); text-transform: uppercase; margin: 0 0 12px;
+  }
+  .act__why p {
+    margin: 0; font-size: 14.5px; line-height: 1.75; color: var(--navy);
+  }
+  .act__why p strong { color: var(--gold-deep); }
+
+  /* ============================================================
+     S7 — SCIENCE / DEVELOPMENT
+  ============================================================ */
+  .sci { background: var(--bg-base); }
+  .sci__grid {
+    display: grid; gap: clamp(40px, 5vw, 64px);
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .sci__grid { grid-template-columns: 1fr 1.1fr; }
+  }
+
+  .sci__title { color: var(--ivory); }
+  .sci__title em { font-style: normal; color: var(--gold); }
+  .sci__body { margin-top: 22px; color: rgba(244,239,228,0.7); font-size: 15.5px; line-height: 1.8; }
+  .sci__body strong { color: var(--ivory); font-weight: 700; }
+
+  .sci__creds {
+    margin-top: 32px;
+    display: grid; gap: 14px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cred {
+    padding: 18px 20px;
+    border: 1px solid var(--warm-line);
+    border-radius: 12px;
+    background: rgba(244,239,228,0.02);
+  }
+  .cred__label { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; }
+  .cred__value { margin-top: 8px; font-size: 16px; font-weight: 700; color: var(--ivory); letter-spacing: -0.01em; }
+
+  /* in vitro 메커니즘 박스 */
+  .mech-box {
+    background: linear-gradient(180deg, rgba(244,239,228,0.04), rgba(244,239,228,0.01));
+    border: 1px solid var(--warm-line);
+    border-radius: 22px;
+    padding: clamp(28px, 4vw, 44px);
+    position: relative;
+  }
+  .mech-box::before {
+    content: "성분 메커니즘  ·  in vitro 시험";
+    position: absolute; top: -12px; left: 28px;
+    background: var(--bg-base);
+    padding: 0 14px;
+    font-size: 10px; font-weight: 800; letter-spacing: 0.2em;
+    color: var(--gold);
+  }
+  .mech-box__title { font-size: clamp(20px, 2.2vw, 24px); font-weight: 800; color: var(--ivory); margin: 0; letter-spacing: -0.015em; }
+  .mech-box__intro { margin-top: 10px; color: rgba(244,239,228,0.55); font-size: 13.5px; line-height: 1.7; }
+  .mech-box__list { margin-top: 26px; padding: 0; list-style: none; }
+  .mech-box__list li {
+    display: grid; grid-template-columns: 28px 1fr;
+    gap: 14px; padding: 14px 0;
+    border-bottom: 1px dashed var(--warm-line);
+  }
+  .mech-box__list li:last-child { border-bottom: 0; }
+  .mech-box__list .n {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--gold); color: var(--bg-base);
+    font-size: 11px; font-weight: 900;
+    display: grid; place-items: center;
+  }
+  .mech-box__list h5 { margin: 0 0 4px; font-size: 14px; font-weight: 800; color: var(--ivory); }
+  .mech-box__list p { margin: 0; font-size: 12.5px; line-height: 1.6; color: rgba(244,239,228,0.55); }
+  .mech-box__source { margin-top: 22px; padding-top: 18px; border-top: 1px dashed var(--warm-line); font-size: 11.5px; font-style: italic; color: rgba(244,239,228,0.45); line-height: 1.65; }
+
+  /* ============================================================
+     S8 — CLOSING / CTA
+  ============================================================ */
+  .closing {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(197,165,114,0.18), transparent 60%),
+      linear-gradient(180deg, var(--bg-base) 0%, var(--bg-deep) 100%);
+    text-align: center;
+  }
+  .closing__hd {
+    font-size: clamp(32px, 4.4vw, 56px);
+    font-weight: 800; letter-spacing: -0.024em; line-height: 1.2;
+    margin: 0 auto; max-width: 22ch; color: var(--ivory);
+  }
+  .closing__hd em { font-style: normal; color: var(--gold); }
+  .closing__sub { margin: 24px auto 0; color: rgba(244,239,228,0.6); font-size: 16px; max-width: 46ch; }
+
+  .cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    margin-top: 44px; padding: 18px 38px;
+    background: linear-gradient(165deg, var(--gold-bright) 0%, var(--gold-deep) 100%);
+    color: var(--bg-base);
+    border: 0; border-radius: 999px;
+    font-size: 16px; font-weight: 800; letter-spacing: -0.005em; text-decoration: none;
+    transition: transform .3s var(--t-fast), box-shadow .3s var(--t-fast);
+    box-shadow: 0 20px 40px -16px rgba(197,165,114,0.55);
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 28px 48px -16px rgba(197,165,114,0.7); }
+  .cta::after { content: "→"; font-size: 18px; transition: transform .3s var(--t-fast); }
+  .cta:hover::after { transform: translateX(4px); }
+
+  .cta--ghost {
+    margin-left: 12px;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    box-shadow: none;
+  }
+  .cta--ghost::after { content: "↗"; }
+  .cta--ghost:hover { background: rgba(197,165,114,0.08); box-shadow: none; }
+
+  .disclaimer {
+    margin: 80px auto 0; padding-top: 36px;
+    max-width: 760px;
+    border-top: 1px solid var(--warm-line);
+    color: rgba(244,239,228,0.45); font-size: 12px; line-height: 1.75;
+    text-align: left;
+  }
+  .disclaimer strong { color: var(--ivory); font-weight: 700; }
+  .disclaimer ul { margin: 10px 0 0; padding-left: 18px; }
+  .disclaimer li { margin: 5px 0; }
+
+  /* ============================================================
+     IN-VIEW
+  ============================================================ */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--t-ease), transform .9s var(--t-ease); }
+  .reveal.is-in { opacity: 1; transform: translateY(0); }
+  .reveal[data-delay="1"] { transition-delay: .08s; }
+  .reveal[data-delay="2"] { transition-delay: .16s; }
+  .reveal[data-delay="3"] { transition-delay: .24s; }
+  .reveal[data-delay="4"] { transition-delay: .32s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .capsule__orbit, .capsule__shell, .capsule__core, .hero__scroll::after, .layer__line span { animation: none !important; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================================================================
+     S1  ·  HERO
+================================================================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero__inner">
+    <div>
+      <span class="hero__line">REFILLED  ·  PRO LINE  ·  PROFESSIONAL</span>
+
+      <h1 class="hero__name reveal" id="hero-title">
+        cADPR Exo<sup>™</sup>
+      </h1>
+
+      <p class="hero__slogan reveal" data-delay="1">
+        표피를 넘어, <em>진피까지 닿는</em><br>
+        시그널 캐리어.
+      </p>
+
+      <p class="hero__sub reveal" data-delay="2">
+        리필드의 단독 신원료 <strong>cADPR™</strong>을 식물유래 엑소좀 캐리어 기술로 가공한 별도 신원료.
+        두피 깊은 영역까지 흔들림 없이 신호를 운반해야 할 때, PRO 라인에서만 만나는 솔루션입니다.
+      </p>
+
+      <div class="hero__meta reveal" data-delay="3">
+        <div class="hero__meta-item">
+          <small>CO-DEVELOPED</small>
+          <span>코스맥스 AB × 리필드</span>
+        </div>
+        <div class="hero__meta-item">
+          <small>FORMULATION</small>
+          <span>5세대 엑소좀 기술</span>
+        </div>
+        <div class="hero__meta-item">
+          <small>CONCENTRATION</small>
+          <span>770,000 ppm 초고함량</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 정교한 캡슐 시각화 -->
+    <div class="capsule reveal" data-delay="2" aria-hidden="true">
+      <div class="capsule__orbit"></div>
+      <div class="capsule__orbit capsule__orbit--2"></div>
+      <div class="capsule__shell">
+        <div class="capsule__core"></div>
+      </div>
+      <span class="capsule__caption">cADPR Exo™  ·  Signal Carrier</span>
+    </div>
+  </div>
+
+  <span class="hero__scroll" aria-hidden="true">SCROLL</span>
+</section>
+
+
+<!-- ================================================================
+     S2  ·  THE GAP — cADPR 단독의 한계 → Exo의 답
+================================================================= -->
+<section class="sec sec--dark" aria-labelledby="gap-title">
+  <div class="wrap">
+    <div class="gap__head">
+      <p class="eyebrow">THE  GAP</p>
+      <h2 class="h2 reveal" id="gap-title">강한 신호도, <em style="color:var(--gold); font-style:normal;">전달되지 않으면 의미가 없습니다.</em></h2>
+      <p class="lead reveal" data-delay="1">
+        리필드의 단독 신원료 cADPR™은 두피 시그널을 다시 흐르게 하는 분자입니다.
+        다만 cADPR은 그 자체로 작고 섬세해 산소·온도·시간에 약하고, 단독으로는 두피 깊은 영역까지 닿기 어렵습니다.
+        cADPR Exo™는 이 한계를 푸는 답입니다.
+      </p>
+    </div>
+
+    <div class="gap__grid">
+      <div class="gap-col reveal">
+        <p class="gap-col__tag">BEFORE  ·  cADPR 단독</p>
+        <h3 class="gap-col__title">시그널은 있지만, 멀리 가지 못한다</h3>
+        <p class="gap-col__line">산소·온도·pH에 취약 — 두피 도달 전 분해 가능</p>
+        <p class="gap-col__line">표피층에서 멈추는 경우가 많음</p>
+        <p class="gap-col__line">모유두 환경(진피층)까지 닿기 어려움</p>
+      </div>
+
+      <div class="gap__arrow" aria-hidden="true">
+        <span>→</span>
+      </div>
+
+      <div class="gap-col gap-col--alt reveal" data-delay="1">
+        <p class="gap-col__tag">cADPR Exo™  ·  PRO 라인 전용</p>
+        <h3 class="gap-col__title">시그널을, 진피층까지 정확히</h3>
+        <p class="gap-col__line">식물유래 엑소좀 캐리어가 cADPR을 안전하게 운반</p>
+        <p class="gap-col__line">리포좀 대비 1/61 사이즈 나노 캐리어 — 정확한 도달</p>
+        <p class="gap-col__line">in vitro 3D Skin 시험상 진피층에서 형광물질 검출</p>
+      </div>
+    </div>
+
+    <p class="note reveal" style="margin-top: 32px;">
+      ※ 본 데이터는 코스맥스 AB 공동개발 원료의 in vitro 시험 결과이며, 완제품 효능을 보장하지 않습니다.
+    </p>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     S3  ·  MEET THE CHARACTER — 캡슐 단면 (외피·코어)
+================================================================= -->
+<section class="sec meet" aria-labelledby="meet-title">
+  <div class="wrap meet__grid">
+
+    <!-- 캡슐 단면 SVG -->
+    <div class="cross-section reveal" aria-hidden="true">
+      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="shellGrad" cx="35%" cy="30%" r="70%">
+            <stop offset="0%"  stop-color="#FFFFFF" stop-opacity="0.5"/>
+            <stop offset="40%" stop-color="#D4B985" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#15110A" stop-opacity="0.85"/>
+          </radialGradient>
+          <radialGradient id="coreGrad2" cx="35%" cy="30%" r="70%">
+            <stop offset="0%"  stop-color="#FFFFFF" stop-opacity="0.95"/>
+            <stop offset="40%" stop-color="#B8C8F0" stop-opacity="0.85"/>
+            <stop offset="100%" stop-color="#0A2A8A" stop-opacity="1"/>
+          </radialGradient>
+        </defs>
+
+        <!-- 외곽 라벨 라인 -->
+        <line x1="380" y1="120" x2="450" y2="100" stroke="#C5A572" stroke-width="0.8" opacity="0.7"/>
+        <line x1="120" y1="320" x2="50"  y2="380" stroke="#4A7BFF" stroke-width="0.8" opacity="0.7"/>
+
+        <!-- 외부 점선 원 (회전) -->
+        <circle cx="250" cy="250" r="240" stroke="#C5A572" stroke-width="0.5" fill="none" opacity="0.18" stroke-dasharray="2 8"/>
+        <circle cx="250" cy="250" r="210" stroke="#C5A572" stroke-width="0.5" fill="none" opacity="0.25" stroke-dasharray="2 8"/>
+
+        <!-- 캡슐 외피 -->
+        <circle cx="250" cy="250" r="170" fill="url(#shellGrad)" stroke="#C5A572" stroke-width="1.2" opacity="0.95"/>
+        <!-- 외피 하이라이트 -->
+        <ellipse cx="210" cy="200" rx="50" ry="30" fill="#FFFFFF" opacity="0.18"/>
+
+        <!-- 캡슐 내부 경계 -->
+        <circle cx="250" cy="250" r="100" fill="none" stroke="rgba(197,165,114,0.3)" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <!-- 코어 (cADPR) -->
+        <circle cx="250" cy="250" r="78" fill="url(#coreGrad2)"/>
+        <circle cx="250" cy="250" r="78" fill="none" stroke="#4A7BFF" stroke-width="0.6" opacity="0.5"/>
+        <!-- 코어 하이라이트 -->
+        <ellipse cx="232" cy="230" rx="20" ry="14" fill="#FFFFFF" opacity="0.6"/>
+
+        <!-- 라벨 텍스트 -->
+        <text x="460" y="100" fill="#C5A572" font-family="Pretendard" font-size="11" font-weight="800" letter-spacing="2">외피 · SHELL</text>
+        <text x="460" y="118" fill="rgba(244,239,228,0.6)" font-family="Pretendard" font-size="10">식물유래 엑소좀</text>
+        <text x="460" y="132" fill="rgba(244,239,228,0.6)" font-family="Pretendard" font-size="10">(병풀캘러스세포외소포)</text>
+
+        <text x="20" y="396" fill="#4A7BFF" font-family="Pretendard" font-size="11" font-weight="800" letter-spacing="2">코어 · CORE</text>
+        <text x="20" y="414" fill="rgba(244,239,228,0.6)" font-family="Pretendard" font-size="10">cADPR™ 리필 시그널</text>
+      </svg>
+    </div>
+
+    <div>
+      <p class="eyebrow">MEET  THE  CHARACTER</p>
+      <h2 class="h2 meet__title reveal" id="meet-title">
+        하나의 캡슐, <em>두 개의 캐릭터.</em>
+      </h2>
+      <p class="meet__body reveal" data-delay="1">
+        cADPR Exo™는 단일 성분이 아니라, <strong>두 개의 캐릭터가 합쳐진 신원료</strong>입니다.
+        외피는 두피 진피층까지 흔들림 없이 도달하는 식물유래 엑소좀 캐리어,
+        코어는 그 안에서 신호를 다시 흐르게 하는 cADPR™ 리필 시그널.
+        외피가 가는 동안 코어를 산소·시간으로부터 지킵니다.
+      </p>
+
+      <div class="meet__chars">
+        <div class="char reveal" data-delay="2">
+          <div class="char__badge char__badge--shell" aria-hidden="true">
+            <!-- Shell icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="5" stroke-dasharray="2 2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="char__name">외피 <b>(Shell)</b></div>
+            <p class="char__desc">식물유래(병풀캘러스세포외소포) 엑소좀 캐리어. 기존 리포좀의 1/61 사이즈 나노 소포체가 코어를 안전하게 운반.</p>
+          </div>
+        </div>
+        <div class="char reveal" data-delay="3">
+          <div class="char__badge char__badge--core core" aria-hidden="true">
+            <!-- Core / pulse icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4A7BFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h4l2-6 4 12 2-6h6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="char__name core">코어 <b>(Core)</b></div>
+            <p class="char__desc">캡슐 안의 cADPR™ 리필 시그널. 캐리어가 도달한 뒤, 모유두 환경에서 신호 흐름을 다시 켜는 신호 분자.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     S4  ·  SIGNATURE NUMBERS — cADPR Exo의 4가지 수치
+================================================================= -->
+<section class="sec sec--dark" aria-labelledby="nums-title">
+  <div class="wrap">
+    <div class="nums__head">
+      <div>
+        <p class="eyebrow">SIGNATURE  NUMBERS</p>
+        <h2 class="h2 reveal" id="nums-title" style="color:var(--ivory);">cADPR Exo™를 정의하는 4가지 숫자.</h2>
+      </div>
+      <p class="lead reveal" data-delay="1">
+        농도 · 밀도 · 정밀 · 도달 — PRO 라인 전용 신원료의 캐릭터를 정의하는 객관 수치.
+      </p>
+    </div>
+
+    <div class="nums__grid">
+      <article class="num reveal">
+        <p class="num__tag">CONCENTRATION · 농도</p>
+        <p class="num__big">770<sup>K&nbsp;ppm</sup></p>
+        <p class="num__name">초고함량 원액</p>
+        <p class="num__desc">PRO 앰플 1제 8ml에 cADPR Exo™ 원액 77 % 함유. 가장 진하게 만나는 한 병.</p>
+      </article>
+      <article class="num reveal" data-delay="1">
+        <p class="num__tag">DENSITY · 밀도</p>
+        <p class="num__big">7.7억<sup>particles</sup></p>
+        <p class="num__name">빽빽한 캐리어망</p>
+        <p class="num__desc">1ml당 약 10⁷개. PRO 앰플 한 병 안에 약 7.7억 개의 엑소좀 캐리어가 두피 전면을 덮습니다.</p>
+      </article>
+      <article class="num reveal" data-delay="2">
+        <p class="num__tag">PRECISION · 정밀</p>
+        <p class="num__big">1/61<sup>×</sup></p>
+        <p class="num__name">정확한 사이즈 매칭</p>
+        <p class="num__desc">기존 리포좀의 1/61 사이즈 나노 캐리어. 모낭 환경에 정확히 도달.</p>
+      </article>
+      <article class="num reveal" data-delay="3">
+        <p class="num__tag">DEPTH · 도달</p>
+        <p class="num__big">진피<sup>층</sup></p>
+        <p class="num__name">표피를 넘어서</p>
+        <p class="num__desc">in vitro 3D Skin 시험에서 cADPR Exo™ 처리군만 진피층에서 형광물질 검출.</p>
+      </article>
+    </div>
+
+    <p class="note reveal" style="margin-top: 32px;">
+      ※ 수치는 모두 cADPR Exo™ 원료 분석 데이터 및 코스맥스 AB 공동개발 in vitro 시험 자료에 근거합니다.
+    </p>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     S5  ·  DELIVERY PATH — 표피→진피→모낭
+================================================================= -->
+<section class="sec deliv" aria-labelledby="deliv-title">
+  <div class="wrap">
+    <div class="deliv__head">
+      <p class="eyebrow">DELIVERY  PATH</p>
+      <h2 class="h2 reveal" id="deliv-title" style="color:var(--ivory);">
+        대부분의 성분은 표피에서 멈춥니다.<br>
+        cADPR Exo™는 <em style="color:var(--gold); font-style:normal;">진피층까지 흐릅니다.</em>
+      </h2>
+      <p class="lead reveal" data-delay="1">
+        in vitro 3D Skin 시험에서, 일반 cADPR과 cADPR 리포좀 처리군은 표피층에서 멈춘 반면,
+        cADPR Exo™ 처리군에서만 진피층에서 형광물질이 검출되었습니다. 모유두 환경이 위치한 핵심 레이어까지 캐리어가 도달했다는 의미입니다.
+      </p>
+    </div>
+
+    <div class="deliv__layers">
+      <div class="layer layer--blocked reveal">
+        <div class="layer__name">EPIDERMIS<b>표피</b></div>
+        <div>
+          <div class="layer__line"><span></span></div>
+          <p class="layer__detail"><strong>일반 cADPR · 일반 리포좀 도달 한계.</strong> 두피 1차 보호 장벽이 차단하는 영역.</p>
+        </div>
+      </div>
+      <div class="layer reveal" data-delay="1">
+        <div class="layer__name">DERMIS<b>진피</b></div>
+        <div>
+          <div class="layer__line"><span></span></div>
+          <p class="layer__detail"><strong>cADPR Exo™ 도달 영역.</strong> 모유두 환경이 위치한 핵심 레이어. in vitro 시험상 형광물질 검출.</p>
+        </div>
+      </div>
+      <div class="layer reveal" data-delay="2">
+        <div class="layer__name">FOLLICLE<b>모낭 환경</b></div>
+        <div>
+          <div class="layer__line"><span></span></div>
+          <p class="layer__detail"><strong>코어가 풀려나는 곳.</strong> 캐리어가 도달한 뒤, 안의 cADPR™이 신호 흐름을 다시 켜기 시작합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="deliv__cite reveal" data-delay="3">
+      <strong>3D Skin in vitro 시험 결과 —</strong>
+      None · Rhodamine Control · cADPR Fusion Liposome · cADPR Fusion Exosome 4개 처리군 비교에서,
+      cADPR Fusion Exosome 처리군에서만 진피층에서 Rhodamine 형광물질이 검출되었습니다.
+      <span style="display:block; margin-top:8px; font-size:11.5px; color:rgba(244,239,228,0.4);">출처: 코스맥스 AB 공동개발 자료 · 2024</span>
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     S6  ·  ACTIVATION RITUAL — 1제 + 2제 PRO 사용 시스템
+================================================================= -->
+<section class="sec act" aria-labelledby="act-title">
+  <div class="wrap">
+    <div class="act__head">
+      <p class="eyebrow">ACTIVATION  RITUAL</p>
+      <h2 class="h2 reveal" id="act-title">사용 직전, <em>그 자리에서 활성화하는 PRO 시스템.</em></h2>
+      <p class="lead reveal" data-delay="1">
+        cADPR Exo™는 매우 섬세한 신원료입니다. 산소 노출과 시간 경과로부터 보호하기 위해
+        리필드 PRO 앰플은 두 개의 제형을 분리해 보관하고, 사용 직전 믹싱으로 활성화하는 시스템을 채택했습니다.
+      </p>
+    </div>
+
+    <div class="act__steps">
+      <div class="step reveal">
+        <span class="step__num">01</span>
+        <div class="step__icon" aria-hidden="true">
+          <!-- Vial icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3h6"/><path d="M9 3v3M15 3v3"/>
+            <path d="M8 6h8v12a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V6z"/>
+            <path d="M8 11h8"/>
+          </svg>
+        </div>
+        <h3 class="step__title">1제  ·  cADPR Exosome 바이알</h3>
+        <p class="step__desc">cADPR Exo™ 원액 77 % 함유. 산소 차단을 위해 알루미늄 캡으로 밀폐된 바이알 유리 용기에 보관.</p>
+      </div>
+
+      <div class="step reveal" data-delay="1">
+        <span class="step__num">02</span>
+        <div class="step__icon" aria-hidden="true">
+          <!-- Syringe icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2l4 4"/>
+            <path d="M15 5l4 4-9 9-4 0 0-4 9-9z"/>
+            <path d="M14 6l4 4"/>
+            <path d="M3 21l3-3"/>
+          </svg>
+        </div>
+        <h3 class="step__title">2제  ·  cADPR Activator 주사기</h3>
+        <p class="step__desc">탈모기능성 가녹실(식약처 비고시) · NMN · EGF · PDRN 등 시너지 성분을 담은 액티베이터. 주사기 용기로 정확한 주입.</p>
+      </div>
+
+      <div class="step reveal" data-delay="2">
+        <span class="step__num">03</span>
+        <div class="step__icon" aria-hidden="true">
+          <!-- Mix / pulse icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v6"/><path d="M9 5l3-3 3 3"/>
+            <circle cx="12" cy="14" r="7"/>
+            <path d="M9 14h6"/>
+            <path d="M12 11v6"/>
+          </svg>
+        </div>
+        <h3 class="step__title">믹싱  ·  사용 직전 활성화</h3>
+        <p class="step__desc">2제를 1제에 주입하고 10회 이상 흔들어 엑소좀을 활성화. 동봉된 고깔캡 어플리케이터로 두피에 직접 도포.</p>
+      </div>
+    </div>
+
+    <div class="act__why reveal" data-delay="3">
+      <h4>WHY THIS RITUAL?</h4>
+      <p>일반 앰플은 모든 성분이 한 병에 섞여 있어, 사용 전 이미 일부 성분이 분해되거나 안정성을 잃습니다.
+      cADPR Exo™ 같은 섬세한 신원료에는 <strong>사용 직전 활성화</strong>가 가장 효과적입니다.
+      전문 두피관리샵의 시술 방식을 그대로 옮긴 PRO 라인 시스템.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     S7  ·  SCIENCE / DEVELOPMENT
+================================================================= -->
+<section class="sec sci" aria-labelledby="sci-title">
+  <div class="wrap">
+    <div class="sci__grid">
+      <div>
+        <p class="eyebrow">SCIENCE  ·  DEVELOPMENT</p>
+        <h2 class="h2 sci__title reveal" id="sci-title">
+          엑소좀 안에 cADPR을 담지한,<br>
+          <em>리필드의 신원료.</em>
+        </h2>
+        <p class="sci__body reveal" data-delay="1">
+          cADPR Exo™는 국내 1위 화장품 제조사 <strong>코스맥스 AB</strong>와 <strong>리필드 탈모 연구소</strong>의 공동개발로 완성되었습니다.
+          엑소좀이라는 5세대 캐리어 기술 안에 신호 분자 cADPR을 담아낸 신원료로, 현재 특허 등록 및 논문이 진행 중입니다.
+        </p>
+
+        <div class="sci__creds">
+          <div class="cred reveal" data-delay="2">
+            <p class="cred__label">CO-DEVELOPMENT</p>
+            <p class="cred__value">코스맥스 AB × 리필드</p>
+          </div>
+          <div class="cred reveal" data-delay="2">
+            <p class="cred__label">TECHNOLOGY</p>
+            <p class="cred__value">5세대 엑소좀 기술</p>
+          </div>
+          <div class="cred reveal" data-delay="3">
+            <p class="cred__label">SOURCE</p>
+            <p class="cred__value">식물유래 (병풀캘러스)</p>
+          </div>
+          <div class="cred reveal" data-delay="3">
+            <p class="cred__label">STATUS</p>
+            <p class="cred__value">특허 등록 진행 중</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- in vitro 메커니즘 박스 -->
+      <div class="mech-box reveal" data-delay="2">
+        <h3 class="mech-box__title">진피층 도달 이후, 안에서 일어나는 일.</h3>
+        <p class="mech-box__intro">
+          캐리어가 도달한 뒤, 코어의 cADPR이 두피 신호 흐름을 다시 켜는 4단계 메커니즘입니다.
+        </p>
+        <ul class="mech-box__list">
+          <li>
+            <span class="n">1</span>
+            <div>
+              <h5>Ca²⁺ 시그널 유지</h5>
+              <p>모유두 환경 내 Ca²⁺ 신호를 60~120분 이상 안정적으로 유지 (NAADP 대비 우위)</p>
+            </div>
+          </li>
+          <li>
+            <span class="n">2</span>
+            <div>
+              <h5>Wnt/β-catenin 경로</h5>
+              <p>TOPFlash Reporter Assay에서 농도 의존적 활성도 증가 관찰</p>
+            </div>
+          </li>
+          <li>
+            <span class="n">3</span>
+            <div>
+              <h5>모발 성장 시그널 ↑</h5>
+              <p>LEF-1 · IGF · VEGF 등 사이토카인 mRNA 발현 증가 관찰</p>
+            </div>
+          </li>
+          <li>
+            <span class="n">4</span>
+            <div>
+              <h5>모발 위축 시그널 ↓</h5>
+              <p>TGF-β1/2 · DKK-1 mRNA 발현 감소 관찰</p>
+            </div>
+          </li>
+        </ul>
+        <p class="mech-box__source">
+          ※ 출처: 리필드 자체 원료 in vitro 시험 / 한·미·중 특허 자료 (NAADP & cADPR 기반).
+          본 데이터는 원료의 메커니즘 확인 자료이며, 완제품의 효능을 보장하지 않습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     S8  ·  CLOSING / CTA
+================================================================= -->
+<section class="sec closing" aria-labelledby="close-title">
+  <div class="wrap">
+    <p class="eyebrow">REFILLED  PRO  LINE</p>
+    <h2 class="closing__hd reveal" id="close-title">
+      두피 진피층까지,<br>
+      <em>흔들림 없이.</em>
+    </h2>
+    <p class="closing__sub reveal" data-delay="1">
+      cADPR Exo™가 적용된 리필드 PRO 라인 솔루션을 만나보세요.
+    </p>
+
+    <div class="reveal" data-delay="2" style="margin-top:0;">
+      <a class="cta" href="#products-pro">
+        PRO 라인 제품 보기
+      </a>
+      <a class="cta cta--ghost" href="#products-cadpr">
+        cADPR 전체 라인업
+      </a>
+    </div>
+
+    <div class="disclaimer">
+      <strong>제품 및 광고 관련 의무 표기</strong>
+      <ul>
+        <li>본 제품은 「탈모 증상 완화에 도움을 주는 기능성 화장품」이며, 질병의 예방 및 치료를 위한 의약품이 아닙니다.</li>
+        <li>본 페이지의 ‘성분 메커니즘’ 데이터는 모두 원료의 in vitro 시험 결과이며, 완제품의 효능을 보장하지 않습니다.</li>
+        <li>‘cADPR Exo™’는 리필드 단독 신원료 cADPR을 식물유래(병풀캘러스세포외소포) 엑소좀 캐리어 기술로 가공한 별도 신원료로, 리필드 PRO 라인업에 한정하여 적용됩니다. 본 엑소좀은 인체유래 엑소좀이 아닙니다.</li>
+        <li>cADPR Exo™는 국내 1위 화장품 제조사 코스맥스 AB와 리필드 탈모 연구소의 공동개발 결과물이며, 현재 특허 등록 및 논문이 진행 중입니다.</li>
+        <li>인용된 시험 데이터는 리필드 자체 원료 시험, 한·미·중 특허 자료(NAADP & cADPR 기반), 코스맥스 AB 공동개발 자료에 근거합니다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  (function () {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    els.forEach(el => io.observe(el));
+  })();
+</script>
+</body>
+</html>
